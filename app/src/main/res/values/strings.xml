@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ExpenseX</string>
+    <string name="welcome">Welcome!</string>
+    <string name="expensesX">ExpenseX helps you save money</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="hello_there">Hello There!</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email_icon">email icon</string>
+    <string name="password_icon">password icon</string>
+    <string name="username_icon">username icon</string>
+    <string name="back_icon">back icon</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+</resources>
