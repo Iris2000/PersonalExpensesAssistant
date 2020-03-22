@@ -2,68 +2,36 @@ package com.example.testing;
 
 
 import android.app.Dialog;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import com.google.android.material.navigation.NavigationView;
-
 import java.util.Calendar;
 
-import static android.content.Context.MODE_PRIVATE;
-
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class TransFragment extends Fragment implements ToggleButton.OnClickListener {
 
-    View transView;
-    DrawerLayout mDrawerLayout;
-    ActionBarDrawerToggle mToggle;
-    Toolbar mToolbar;
-    TextView mUsername;
-    TextView mUserEmail;
-    TextView mDate;
-    SharedPreferences sp;
-    public String month;
-    public int year;
-    Dialog chooseDate;
-    public ToggleButton[] toggleBtn;
-    ToggleButton checkedBtn = null;
-    String[] monthName;
+    private View transView;
+    private TextView mDate;
+    private String month;
+    private int year;
+    private Dialog chooseDate;
+    private ToggleButton[] toggleBtn;
+    private ToggleButton checkedBtn = null;
+    private String[] monthName;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         transView = inflater.inflate(R.layout.fragment_trans, container, false);
-
-//        mToolbar = transView.findViewById(R.id.tool_bar);
-//        ((AppCompatActivity)getActivity()).setSupportActionBar(mToolbar);
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
-//        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        mDrawerLayout = transView.findViewById(R.id.drawer);
-//        mToggle = new ActionBarDrawerToggle(getActivity(), mDrawerLayout, mToolbar, R.string.open, R.string.close);
-//        mDrawerLayout.addDrawerListener(mToggle);
-//        mToggle.syncState();
 
         // get current month and year
         Calendar calendar = Calendar.getInstance();
@@ -72,7 +40,8 @@ public class TransFragment extends Fragment implements ToggleButton.OnClickListe
         month = monthName[calendar.get(Calendar.MONTH)];
         year = calendar.get(Calendar.YEAR);
         mDate = transView.findViewById(R.id.date);
-        mDate.setText(month + " " + year);
+        String text = month + " " + year;
+        mDate.setText(text);
         mDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +52,7 @@ public class TransFragment extends Fragment implements ToggleButton.OnClickListe
         return transView;
     }
 
-    public void showDatePicker(View view) {
+    private void showDatePicker(View view) {
         toggleBtn = new ToggleButton[12];
 
         chooseDate = new Dialog(getActivity());
@@ -123,7 +92,8 @@ public class TransFragment extends Fragment implements ToggleButton.OnClickListe
             public void onClick(View v) {
                 year--;
                 mYear.setText(Integer.toString(year));
-                mDate.setText(month + " " + year);
+                String text = month + " " + year;
+                mDate.setText(text);
 
             }
         });
@@ -133,7 +103,8 @@ public class TransFragment extends Fragment implements ToggleButton.OnClickListe
             public void onClick(View v) {
                 year++;
                 mYear.setText(Integer.toString(year));
-                mDate.setText(month + " " + year);
+                String text = month + " " + year;
+                mDate.setText(text);
             }
         });
         chooseDate.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -158,6 +129,7 @@ public class TransFragment extends Fragment implements ToggleButton.OnClickListe
 
         month = checked.getText().toString();
         mDate = transView.findViewById(R.id.date);
-        mDate.setText(month + " " + year);
+        String text = month + " " + year;
+        mDate.setText(text);
     }
 }
