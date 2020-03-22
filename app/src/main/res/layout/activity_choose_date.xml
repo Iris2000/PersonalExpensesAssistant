@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#C0000000">
+    android:background="#C0000000"
+    tools:context=".TransFragment">
 
     <ImageView
         android:id="@+id/background"
@@ -75,8 +76,7 @@
         android:textOff="JAN"
         android:textOn="JAN"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yearTextView"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/yearTextView"/>
 
     <ToggleButton
         android:id="@+id/toggleButton2"
@@ -89,8 +89,7 @@
         android:textOn="FEB"
         app:layout_constraintEnd_toStartOf="@+id/toggleButton3"
         app:layout_constraintStart_toEndOf="@+id/toggleButton1"
-        app:layout_constraintTop_toBottomOf="@+id/yearTextView"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/yearTextView"/>
 
     <ToggleButton
         android:id="@+id/toggleButton3"
@@ -103,8 +102,7 @@
         android:textOn="MAR"
         app:layout_constraintEnd_toStartOf="@+id/toggleButton4"
         app:layout_constraintStart_toEndOf="@+id/toggleButton2"
-        app:layout_constraintTop_toBottomOf="@+id/yearTextView"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/yearTextView"/>
 
     <ToggleButton
         android:id="@+id/toggleButton4"
@@ -117,8 +115,7 @@
         android:textOn="APR"
         app:layout_constraintEnd_toStartOf="@+id/toggleButton5"
         app:layout_constraintStart_toEndOf="@+id/toggleButton3"
-        app:layout_constraintTop_toBottomOf="@+id/yearTextView"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/yearTextView"/>
 
     <ToggleButton
         android:id="@+id/toggleButton5"
@@ -131,8 +128,7 @@
         android:textOn="MAY"
         app:layout_constraintEnd_toStartOf="@+id/toggleButton6"
         app:layout_constraintStart_toEndOf="@+id/toggleButton4"
-        app:layout_constraintTop_toBottomOf="@+id/yearTextView"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/yearTextView"/>
 
     <ToggleButton
         android:id="@+id/toggleButton6"
@@ -148,8 +144,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/toggleButton5"
-        app:layout_constraintTop_toBottomOf="@+id/yearTextView"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/yearTextView"/>
 
     <ToggleButton
         android:id="@+id/toggleButton7"
@@ -160,8 +155,7 @@
         android:textOn="JUL"
         app:layout_constraintEnd_toEndOf="@+id/toggleButton1"
         app:layout_constraintStart_toStartOf="@+id/toggleButton1"
-        app:layout_constraintTop_toBottomOf="@+id/toggleButton1"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton1"/>
 
     <ToggleButton
         android:id="@+id/toggleButton8"
@@ -173,8 +167,7 @@
         app:layout_constraintEnd_toEndOf="@+id/toggleButton2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/toggleButton2"
-        app:layout_constraintTop_toBottomOf="@+id/toggleButton2"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton2"/>
 
     <ToggleButton
         android:id="@+id/toggleButton9"
@@ -187,8 +180,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/toggleButton3"
-        app:layout_constraintTop_toBottomOf="@+id/toggleButton3"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton3"/>
 
     <ToggleButton
         android:id="@+id/toggleButton10"
@@ -201,8 +193,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/toggleButton4"
-        app:layout_constraintTop_toBottomOf="@+id/toggleButton4"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton4"/>
 
     <ToggleButton
         android:id="@+id/toggleButton11"
@@ -215,8 +206,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/toggleButton5"
-        app:layout_constraintTop_toBottomOf="@+id/toggleButton5"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton5"/>
 
 
     <ToggleButton
@@ -230,7 +220,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/toggleButton6"
-        app:layout_constraintTop_toBottomOf="@+id/toggleButton6"
-        android:onClick="onMonthClicked"/>
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton6"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
